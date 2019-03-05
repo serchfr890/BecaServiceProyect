@@ -20,7 +20,7 @@ public abstract class BaseTest {
     @Autowired
     public TestEntityManager entityManager;
 
-    @Autowired
-    public IbecaService becaService;
+    //@Autowired
+    //public IbecaService becaService;
 
 }

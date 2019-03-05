@@ -7,7 +7,8 @@ import javax.persistence.*;
 public class UserDO {
     //Las primeras tres instrucciones son para un primary key
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) //Por si tiene autoIncremeny
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "UserSeq") //Por si tiene autoIncremeny
+    @SequenceGenerator(name="UserSeq", sequenceName = "users_id_seq", allocationSize = 1)
     @Column(name = "id")
 
     private Long id;
